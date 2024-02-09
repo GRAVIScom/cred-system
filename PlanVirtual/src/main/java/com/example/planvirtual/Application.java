@@ -3,6 +3,7 @@ package com.example.planvirtual;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// my comment
 @SpringBootApplication
 public class Application {
 
