@@ -49,6 +49,48 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.4.4.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java</artifactId>
+            <version>21.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java-kickstart</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>12.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-groovydoc</artifactId>
+            <version>3.0.15</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.valdemargr/gql-core -->
+        <dependency>
+            <groupId>io.github.valdemargr</groupId>
+            <artifactId>gql-core_3</artifactId>
+            <version>0.3.4-38-12af7cb</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.grooviter/gql-core -->
+        <dependency>
+            <groupId>com.github.grooviter</groupId>
+            <artifactId>gql-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
