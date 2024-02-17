@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  docker:
+    compose:
+      file: ./devops/docker-compose.yaml
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphql/v0/getPlan
+
+graphql:
+  altair:
+    options:
+      endpoint-url: /graphql/v0/getPlan

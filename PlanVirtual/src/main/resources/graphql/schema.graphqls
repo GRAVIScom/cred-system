@@ -1,0 +1,16 @@
+schema {
+    query: Query
+}
+
+type resultPlan {
+    annuityPayment: Int
+    mainSum: Int
+    percentSum: Int
+    paymentDate: String
+}
+
+type Query {
+    getPlan(
+        loanId: Int
+    ) : resultPlan
+}

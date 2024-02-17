@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/PlanVirtual/PlanVirtual.iml" filepath="$PROJECT_DIR$/PlanVirtual/PlanVirtual.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cred-system.iml" filepath="$PROJECT_DIR$/.idea/cred-system.iml" />
     </modules>
   </component>
