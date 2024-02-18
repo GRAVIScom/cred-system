@@ -1,36 +1,36 @@
 package com.example.planvirtual.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import java.util.Date;
 
 @Entity
-@Table(name = "loan_offers")
-@Getter
-@Setter
-public class Loan_offers {
+@Table(name = "'Offers'", schema = "public")
+@NoArgsConstructor
+@AllArgsConstructor
+public class Offers {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @NonNull
     @Column(name = "id", nullable = false)
     Long id;
 
-    @Column(name = "id_client", nullable = false)
-    Long clientId;
-
-    @Column(name = "id_loan_template", nullable = false)
-    Long loanTemplateId;
-
     @Column(name = "limits", nullable = false)
+    @NonNull
     Long limits;
 
     @Column(name = "summ", nullable = false)
+    @NonNull
     Long summa;
 
     @Column(name = "rate", nullable = false)
-    double rate;
+    @NonNull
+    Double rate;
 
-    @Column(name = "create_date", nullable = false)
-    Date dateLoan;
+    @Column(name = "datePayment", nullable = false)
+    @NonNull
+    Date datePayment;
 }

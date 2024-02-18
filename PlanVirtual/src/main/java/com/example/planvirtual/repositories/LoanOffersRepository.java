@@ -1,28 +1,32 @@
 package com.example.planvirtual.repositories;
 
-import com.example.planvirtual.entities.Loan_offers;
+import com.example.planvirtual.entities.Offers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.Optional;
 
 @Repository
-public interface LoanOffersRepository extends JpaRepository<Loan_offers, Long> {
-    @Query(value = "select summa from Loan_offers where id = :loanId", nativeQuery = false)
-    Long getSumById(@Param("loanId") int loanId);
+public interface LoanOffersRepository extends JpaRepository<Offers, Long> {
+    @Query(value = "select l1.summ from public.offers l1 where l1.id = 41", nativeQuery = true)
+    @Transactional
+    long getSumById(@Param("id") int loanId);
 
-    @Query(value = "select limits from loan_offers where id = :loanId", nativeQuery = true)
+    @Query(value = "select limits from offers where id = :loanId", nativeQuery = true)
+    @Transactional
     Long getLimitById(@Param("loanId") int loanId);
 
-    @Query(value = "select rate from Loan_offers where id = :loanId", nativeQuery = false)
+    @Query(value = "select rate from offers where id = :loanId", nativeQuery = true)
+    @Transactional
     double getRateById(@Param("loanId") int loanId);
 
-    @Query(value = "select create_date from loan_offers where id = :loanId", nativeQuery = true)
-    Date getDateById(@Param("loanId") int loanId);
+    @Query(value = "select datepayment from OFFERS where OFFERS.id = :loanId", nativeQuery = true)
+    @Transactional
+    Date getDateById(int loanId);
 
-    @Query(value = "select dateLoan from Loan_offers where clientId = 12", nativeQuery = false)
-    Optional<Loan_offers> getAllByClientId(Long clientId);
+    Optional<Offers> getAllById(Long id);
 }

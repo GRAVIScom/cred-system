@@ -2,6 +2,8 @@ package com.example.planvirtual.interfaces;
 
 import com.example.planvirtual.dto.PlanDto;
 
+import java.util.List;
+
 public interface PlanService {
-    PlanDto getPlan(int loanId);
+    List<PlanDto> getPlan(int loanId);
 }

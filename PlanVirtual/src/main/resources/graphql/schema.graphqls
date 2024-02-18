@@ -3,14 +3,20 @@ schema {
 }
 
 type resultPlan {
-    annuityPayment: Int
-    mainSum: Int
-    percentSum: Int
+    annuityPayment: String
+    mainSum: String
+    percentSum: String
     paymentDate: String
+}
+
+type outType {
+    errorCode: String
+    status: Int
+    result : [resultPlan]
 }
 
 type Query {
     getPlan(
         loanId: Int
-    ) : resultPlan
+    ) : [resultPlan]
 }

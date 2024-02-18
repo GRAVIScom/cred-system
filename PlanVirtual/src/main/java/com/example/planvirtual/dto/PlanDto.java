@@ -1,31 +1,30 @@
 package com.example.planvirtual.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AccessLevel;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
-@Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PlanDto extends ValidationResultDto{
 
     /**
      * Сумма ануитетного платежа
      */
-    double annuityPayment;
+    String annuityPayment;
 
     /**
      * Сумма основного долга
      */
-    double mainSum;
+    String mainSum;
 
     /**
      * Сумма процентов
      */
-    double percentSum;
+    String percentSum;
 
     /**
      *Дата платежа
@@ -35,10 +34,32 @@ public class PlanDto extends ValidationResultDto{
     public PlanDto() {
     }
 
-    public PlanDto(double annuityPayment, double mainSum, double percentSum, String paymentDate) {
-        this.annuityPayment = annuityPayment;
-        this.mainSum = mainSum;
-        this.percentSum = percentSum;
-        this.paymentDate = paymentDate;
+    public static class Builder {
+        PlanDto planDto;
+
+        public Builder(){
+            planDto = new PlanDto();
+        }
+
+        public Builder setAnnuityPayment(@NotBlank String annuityPayment){
+            this.planDto.annuityPayment = annuityPayment;
+            return this;
+        }
+        public Builder setMainSum(@NotBlank String mainSum){
+            this.planDto.mainSum = mainSum;
+            return this;
+        }
+        public Builder setPercentSum(@NotBlank String percentSum){
+            this.planDto.percentSum = percentSum;
+            return this;
+        }
+        public Builder setPaymentDate(@NotBlank String paymentDate){
+            this.planDto.paymentDate = paymentDate;
+            return this;
+        }
+
+        public PlanDto build() {
+            return planDto;
+        }
     }
 }
