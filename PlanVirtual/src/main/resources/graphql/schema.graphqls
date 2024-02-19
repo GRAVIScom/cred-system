@@ -3,20 +3,38 @@ schema {
 }
 
 type resultPlan {
-    annuityPayment: String
-    mainSum: String
-    percentSum: String
+    # Аннуитетный платеж
+    annuityPayment: Float
+    # Сумма основного долга
+    mainSum: Float
+    # Сумма процентов
+    percentSum: Float
+    # Дата платежа
     paymentDate: String
 }
 
-type outType {
-    errorCode: String
-    status: Int
-    result : [resultPlan]
+type credInfo {
+    # Срок кредита в месяцах
+    limit: Int
+    # Сумма переплаты по процентам
+    percentSum: Int
+    # Сумма кредита
+    summa : Int
+    # Ставка
+    rate: Float
+    # Дата выдачи
+    date_payment: String
 }
 
 type Query {
+    # Создать график платежей
     getPlan(
-        loanId: Int
+        # Id кредита
+        loanId: Int!
     ) : [resultPlan]
+    # Запросить основную информацию по кредиту
+    getInfo(
+        # Id кредита
+        loanId: Int!
+    ) : credInfo
 }

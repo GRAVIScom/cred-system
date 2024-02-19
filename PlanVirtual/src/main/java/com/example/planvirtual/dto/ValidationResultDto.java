@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ValidationResultDto extends BaseDto {
+public class ValidationResultDto {
     Boolean acceptValidation;
     String errorList;
 }

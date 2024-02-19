@@ -14,17 +14,17 @@ public class PlanDto extends ValidationResultDto{
     /**
      * Сумма ануитетного платежа
      */
-    String annuityPayment;
+    double annuityPayment;
 
     /**
      * Сумма основного долга
      */
-    String mainSum;
+    double mainSum;
 
     /**
      * Сумма процентов
      */
-    String percentSum;
+    double percentSum;
 
     /**
      *Дата платежа
@@ -41,15 +41,15 @@ public class PlanDto extends ValidationResultDto{
             planDto = new PlanDto();
         }
 
-        public Builder setAnnuityPayment(@NotBlank String annuityPayment){
+        public Builder setAnnuityPayment(@NotBlank double annuityPayment){
             this.planDto.annuityPayment = annuityPayment;
             return this;
         }
-        public Builder setMainSum(@NotBlank String mainSum){
+        public Builder setMainSum(@NotBlank double mainSum){
             this.planDto.mainSum = mainSum;
             return this;
         }
-        public Builder setPercentSum(@NotBlank String percentSum){
+        public Builder setPercentSum(@NotBlank double percentSum){
             this.planDto.percentSum = percentSum;
             return this;
         }
