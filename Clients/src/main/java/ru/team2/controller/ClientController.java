@@ -41,7 +41,7 @@ public class ClientController {
 
     @PostMapping
     @Operation(summary = "Create a new client")
-    public ResponseEntity<Client> createCar(@RequestBody Client client) {
+    public ResponseEntity<Client> createClient(@RequestBody Client client) {
         service.save(client);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Location", "/api/v1/clients/" + client.getId());

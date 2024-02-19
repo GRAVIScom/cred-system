@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Clients/Clients.iml" filepath="$PROJECT_DIR$/Clients/Clients.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cred-system.iml" filepath="$PROJECT_DIR$/.idea/cred-system.iml" />
     </modules>
   </component>
