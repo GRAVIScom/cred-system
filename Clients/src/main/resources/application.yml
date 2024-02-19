@@ -1,24 +1,29 @@
 spring:
   profiles:
-    active: postgres
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost/postgres:5432/public
-    username: postgres
-    password: admin
+    active: h2
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        show_sql: true
-        default_schema: public
-    defer-datasource-initialization: true
   sql:
     init:
       mode: always
-  docker:
-    compose:
-      file: ./devops/docker-compose.yaml
+
+server:
+  port: 8080
+
+
+logging:
+  level:
+    ru.edu: info
+  path: creditSystem.log
+
+service:
+  description: Credit System
+  version: 1.0 BETA
+
+# SPRING_PROFILES_ACTIVE=dev
