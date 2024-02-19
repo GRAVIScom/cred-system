@@ -11,8 +11,8 @@
 <groupId>ru.team2</groupId>
 <artifactId>Clients</artifactId>
 <version>0.0.1-SNAPSHOT</version>
-<name>PlanVirtual</name>
-<description>PlanVirtual</description>
+<name>Clients</name>
+<description>Clients</description>
 
 <properties>
   <java.version>17</java.version>
