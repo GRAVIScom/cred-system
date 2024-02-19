@@ -3,12 +3,12 @@ spring:
     active: postgres
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost/postgres:5432/public
+    url: jdbc:postgresql://localhost/postgres:8089/public
     username: postgres
     password: admin
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         format_sql: true

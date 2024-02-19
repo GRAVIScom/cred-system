@@ -19,12 +19,10 @@ public class PlanServiceImpl implements PlanService {
     @Override
     public List<PlanDto> getPlan(int loanId){
         Calendar cl = Calendar.getInstance();
-        Date summa = loanOffersRepository.getDateById(2);
-        System.out.println(summa);
-        double summ = 1000000;
-        double limit = 36L;
-        double rate = 15.5;
-        Date dateLoan = new Date(1648483200000L);
+        double summ = loanOffersRepository.getSumById(loanId);
+        double limit = loanOffersRepository.getLimitById(loanId);
+        double rate = loanOffersRepository.getRateById(loanId);
+        Date dateLoan = loanOffersRepository.getDateById(loanId);
         cl.setTime(dateLoan);
         double annuityPayment = PlanUtils.calcAnnuityPayment(summ,rate,limit);
         double monthPayment = 0;

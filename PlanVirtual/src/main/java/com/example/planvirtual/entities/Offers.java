@@ -8,7 +8,7 @@ import lombok.NonNull;
 import java.util.Date;
 
 @Entity
-@Table(name = "'Offers'", schema = "public")
+@Table(name = "offers", schema = "public")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Offers {
@@ -30,7 +30,7 @@ public class Offers {
     @NonNull
     Double rate;
 
-    @Column(name = "datePayment", nullable = false)
+    @Column(name = "date_payment", nullable = false)
     @NonNull
     Date datePayment;
 }
