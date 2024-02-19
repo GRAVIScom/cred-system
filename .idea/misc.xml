@@ -5,11 +5,12 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/PlanVirtual/pom.xml" />
+        <option value="$PROJECT_DIR$/Clients/pom.xml" />
+        <option value="$PROJECT_DIR$/LoanTemplates/pom.xml" />
       </list>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" default="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
